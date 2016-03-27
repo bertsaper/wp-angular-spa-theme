@@ -1,0 +1,4 @@
+https://github.com/nicopinto/wp-spa-boilerplate
+
+
+Installed Ubunto 14 intalled node and ruby and grunt failed at compass ran node (npm install) in folder created by wp-spa-boilerplate from git hub.  ran grunt this did output despite compass problems into the themes folder.
