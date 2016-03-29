@@ -18,4 +18,4 @@ Add your page to the menu by going to Appearance|Menus.
 Please Note: Sending a page to the "Trash" will not delete menu listing. Entering the "Trash" area and deleting the post will update the menu.
 The Preview page will not look like the page that displays for visitors. It will show the text and images that will be formatted for visitors.
 
-If you are not satisfied with the content, return to the edit form by closing the preview tab or window.
+Known Issue: The preview page will sometimes be overtaken by the angular directives. That is, the Preview ID and Nonce will disappear as the page redirects to home. The longer the content, the less likely this is to occur.
