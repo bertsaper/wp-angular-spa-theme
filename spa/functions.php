@@ -338,17 +338,13 @@ function partial_create($pid)
     //get machine path to the theme so we can create and update static files
     $theme_path = get_template_directory();
     
-    if (fnmatch($pattern, $slug)) {
-    } elseif (fnmatch($pattern2, $slug)) {
-    } else {
+    if (fnmatch($pattern, $slug)=== false && fnmatch($pattern2, $slug)=== false  ) {
         if (strlen($slug) > 5) {
             $content = apply_filters('the_content', $post->post_content);
             
             //This creates or updates the partials loaded by the spa
             $fp_partials = fopen($theme_path . '/js/partials/' . $slug . '.html', 'w');
             fwrite($fp_partials, $content);
-            
-            
             fclose($fp_partials);
         }
     }
@@ -368,9 +364,7 @@ function partial_update($pid)
     $pattern2   = '*revision-v*';
     //get machine path to the theme so we can create and update static files
     $theme_path = get_template_directory();
-    if (fnmatch($pattern, $slug)) {
-    } elseif (fnmatch($pattern2, $slug)) {
-    } else {
+    if (fnmatch($pattern, $slug)=== false && fnmatch($pattern2, $slug)=== false  ) {
         if (strlen($slug) > 5) {
             $content = apply_filters('the_content', $post->post_content);
             
