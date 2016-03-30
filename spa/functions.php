@@ -113,7 +113,7 @@ function get_primary_menu()
             'items_wrap' => '%3$s',
             'echo' => 0
         );
-        $menu                  = wp_nav_menu($primary_menu_defaults);
+        $menu = wp_nav_menu($primary_menu_defaults);
         
         // Store the menu in a transient for 3 seconds
         set_transient('sms062020145_primary_menu', $menu, 03);
@@ -338,7 +338,7 @@ function partial_create($pid)
     //get machine path to the theme so we can create and update static files
     $theme_path = get_template_directory();
     
-    if (fnmatch($pattern, $slug)=== false && fnmatch($pattern2, $slug)=== false  ) {
+    if (fnmatch($pattern, $slug) === false && fnmatch($pattern2, $slug) === false  ) {
         if (strlen($slug) > 5) {
             $content = apply_filters('the_content', $post->post_content);
             
@@ -364,7 +364,7 @@ function partial_update($pid)
     $pattern2   = '*revision-v*';
     //get machine path to the theme so we can create and update static files
     $theme_path = get_template_directory();
-    if (fnmatch($pattern, $slug)=== false && fnmatch($pattern2, $slug)=== false  ) {
+    if (fnmatch($pattern, $slug) === false && fnmatch($pattern2, $slug) === false  ) {
         if (strlen($slug) > 5) {
             $content = apply_filters('the_content', $post->post_content);
             
